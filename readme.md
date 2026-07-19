@@ -1,7 +1,7 @@
 # Transfer Learning using ResNet for Celebrity Recognition
 
 ## Description
-This project demonstrates transfer learning using a pretrained ResNet18 model. The final layer is modified to recognize 10 categories (simulating Bengali celebrities) instead of the original 1000 ImageNet categories. The model is trained on CIFAR-10 dataset as a practice dataset — the same concept applies directly to the Bengali Celebrity Multimodal Dataset project.
+This project demonstrates transfer learning using a pretrained ResNet18 model. The final layer is modified to recognize 10 categories (simulating Bengali celebrities) instead of the original 1000 ImageNet categories. The model is trained on the CIFAR-10 dataset as a practice dataset — the same concept applies directly to the Bengali Celebrity Multimodal Dataset project.
 
 ## What is Transfer Learning?
 Transfer learning means borrowing a pretrained model that already knows edges, shapes, textures and face patterns from millions of images. We only replace the final layer to match our task. This saves months of training time and gives better results.
@@ -22,7 +22,7 @@ ResNet18 (pretrained on ImageNet)
 └── Final layer       → REPLACED
     Original : Linear(512, 1000)  → 1000 ImageNet categories
     Modified : Linear(512, 10)    → 10 celebrities
-    Real project: Linear(512, 250) → 250 Bengali celebrities
+   
 ```
 
 ## Results
@@ -76,14 +76,7 @@ pip install torchvision
 - `torch.no_grad()` → disable gradient during testing
 
 ## Author
-Fatima
-Research Assistant — Bengali Celebrity Multimodal Dataset Project
-
-## References
-- [ResNet Paper](https://arxiv.org/abs/1512.03385)
-- [PyTorch Transfer Learning](https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
-- [TorchVision Models](https://pytorch.org/vision/stable/models.html)
-
+Fatima Noor
 ## Related Projects
 - [face-detection-scrfd](https://github.com/fatima-noor-ai/face-detection-scrfd) → Face detection on images
 - [video-face-detection-scrfd](https://github.com/fatima-noor-ai/video-face-detection-scrfd) → Face detection on videos
